@@ -12,7 +12,7 @@ provider "google" {
 }
 
 
-resource "google_compute_instance" "artifactory" {
+resource "google_compute_instance" "salt-minion" {
   name         = "${var.gci_name}"
   machine_type = "${var.gci_type}"
   zone         = "${var.gcp_zone}"
@@ -26,8 +26,8 @@ resource "google_compute_instance" "artifactory" {
   }
 
   // Local SSD disk
-  scratch_disk {
-  }
+  //scratch_disk {
+  //}
 
   network_interface {
     network = "default"
