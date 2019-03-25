@@ -12,12 +12,12 @@ variable "gcp_project" {
 }
 
 variable "gci_name" {
-  default = "artifactory"
+  default = "salt-minion"
 }
 
 variable "gci_type" {
   description = "Instance type"
-  default = "n1-standard-1"
+  default = "g1-small"
 }
 
 variable "gci_image" {
